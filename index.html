@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Seaborn Media — Seafood, mejor contado.</title>
-<meta name="description" content="Agencia creativa para seafood, acuicultura y sistemas alimentarios. Convertimos un sector complejo en un lenguaje que el mundo puede leer." />
+<title>SeaBorn Media — Estudio editorial para el sector seafood</title>
+<meta name="description" content="SeaBorn Media. Estudio editorial especializado en seafood, acuicultura y sistemas alimentarios. Contamos un sector técnico como merece." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -12,17 +12,35 @@
 </head>
 <body>
 
+<!-- Reusable SVG brand mark -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sb-mark" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="48" fill="var(--salmon)"/>
+      <path d="M20 52 C 32 40, 48 38, 58 44 L 78 30 L 72 52 L 78 74 L 58 60 C 48 66, 32 64, 20 52 Z"
+            fill="var(--seabed)"/>
+    </symbol>
+    <symbol id="sb-silhouette" viewBox="0 0 600 600">
+      <path d="M80 300 C 160 180, 340 170, 440 230 L 560 110 L 520 300 L 560 490 L 440 370 C 340 430, 160 420, 80 300 Z"
+            fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
 <!-- NAV -->
 <header class="nav">
   <div class="container nav__inner">
-    <a href="#top" class="nav__brand">Seaborn<span>.</span> Media</a>
+    <a href="#top" class="nav__brand">
+      <svg class="nav__mark" aria-hidden="true"><use href="#sb-mark"/></svg>
+      <span class="nav__wordmark">Sea<strong>Born</strong><sup>media</sup></span>
+    </a>
     <nav class="nav__links">
       <a href="#work">Proyectos</a>
       <a href="#how">Método</a>
       <a href="#services">Servicios</a>
       <a href="#founder">Estudio</a>
     </nav>
-    <a href="#contact" class="nav__cta">Empezar proyecto</a>
+    <a href="#contact" class="nav__cta">Cuéntame un proyecto</a>
   </div>
 </header>
 
@@ -30,12 +48,13 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <p class="hero__label">Agencia creativa para seafood y acuicultura</p>
-      <h1 class="hero__title">Seafood, <em>mejor contado.</em></h1>
+    <svg class="hero__silhouette" aria-hidden="true"><use href="#sb-silhouette"/></svg>
+    <div class="container hero__inner">
+      <p class="hero__label">Agencia editorial · Seafood · Acuicultura · Sistemas alimentarios</p>
+      <h1 class="hero__title">El sector sabe <em>de mar.</em><br/>Nosotras, <em>de contarlo.</em></h1>
       <div class="hero__meta">
-        <p>Convertimos la acuicultura, la pesca y los sistemas alimentarios en historias que el mundo pueda leer de verdad.</p>
-        <p>Un estudio editorial para un sector que siempre ha sabido producir mejor de lo que se ha sabido explicar.</p>
+        <p>SeaBorn Media es un estudio editorial pensado para un sector que hasta ahora se ha comunicado sobre todo hacia dentro.</p>
+        <p>Trabajamos con quienes producen, investigan y regulan lo que viene del mar. Y escribimos —y diseñamos— para el resto.</p>
       </div>
     </div>
   </section>
@@ -45,10 +64,10 @@
     <div class="container">
       <p class="section-tag" style="color: var(--aqua)">Qué hacemos</p>
       <div class="what__grid">
-        <h2 class="what__lede">Traducimos un sector técnico a un lenguaje que funciona — para regulación, retail, inversores y quien se come lo que produces.</h2>
+        <h2 class="what__lede">Traducimos un sector técnico al idioma del retail, los medios, la administración y quien se come lo que producís.</h2>
         <div class="what__body">
-          <p>Seaborn Media es un estudio creativo construido alrededor de un solo sector. No pretendemos cubrirlo todo. Cubrimos seafood, acuicultura y el sistema alimentario en su conjunto — con la profundidad que eso requiere.</p>
-          <p>La ciencia se convierte en contenido. Los datos, en narrativa. Un sector que se lee como un informe regulatorio empieza a leerse como algo que merece atención.</p>
+          <p>No somos una agencia generalista. Trabajamos solo con seafood, acuicultura y sistemas alimentarios, con la profundidad que el tema pide.</p>
+          <p>La ciencia se convierte en contenido. Los datos, en relato. Y una de las industrias más importantes del planeta deja de leerse como un informe regulatorio.</p>
         </div>
       </div>
     </div>
@@ -56,21 +75,22 @@
 
   <!-- PROBLEM -->
   <section class="problem">
+    <svg class="problem__silhouette" aria-hidden="true"><use href="#sb-silhouette"/></svg>
     <div class="container">
       <p class="section-tag">El problema</p>
-      <h2 class="problem__title">El seafood tiene un <em>problema de comunicación.</em></h2>
+      <h2 class="problem__title">Al sector no le faltan <em>argumentos.</em> Le falta <em>relato.</em></h2>
       <div class="problem__grid">
         <div class="problem__item">
           <h4>01 — Datos</h4>
-          <p>Los números existen. Rendimiento, trazabilidad, huella, mortalidad. Están en informes trimestrales que casi nadie abre.</p>
+          <p>Los números están ahí. Rendimientos, trazabilidad, huella, mortalidades. Enterrados en memorias anuales que no abre casi nadie.</p>
         </div>
         <div class="problem__item">
           <h4>02 — Ciencia</h4>
-          <p>La investigación es sólida. Y se queda atrapada tras revistas científicas, siglas y PDFs de 90 páginas que ningún comprador va a leer.</p>
+          <p>La investigación es sólida. Pero se queda atrapada en revistas de acceso cerrado, siglas y pdfs de noventa páginas que ningún comprador va a leer.</p>
         </div>
         <div class="problem__item">
-          <h4>03 — Narrativa</h4>
-          <p>Lo que al sector le falta es voz. Así que consumidores, medios y legisladores siguen escribiéndole la historia.</p>
+          <h4>03 — Voz</h4>
+          <p>Lo que no hay es voz. Así que consumidores, medios y legisladores le acaban escribiendo la historia al sector por su cuenta.</p>
         </div>
       </div>
     </div>
@@ -81,30 +101,30 @@
     <div class="container">
       <p class="section-tag" style="color: var(--salmon)">Cómo trabajamos</p>
       <div class="how__intro">
-        <h2 class="section-title">Un método prestado del periodismo editorial, no de la publicidad.</h2>
-        <p>La mayoría de las agencias llega con una plantilla. Nosotras llegamos con una lista de lecturas. El seafood no necesita campañas más ruidosas — necesita campañas más claras.</p>
+        <h2 class="section-title">Un método que viene del periodismo, no de la publicidad.</h2>
+        <p>La mayoría de las agencias llega con una plantilla. Nosotras llegamos con bibliografía. El seafood no necesita gritar más fuerte. Necesita que se le explique bien.</p>
       </div>
 
       <div class="how__steps">
         <div class="how__step">
           <span class="how__num">01</span>
-          <h3>Leer la ciencia primero.</h3>
-          <p>Antes de escribir un titular, leemos tus informes, tus notas de laboratorio, tu exposición regulatoria. Sin atajos.</p>
+          <h3>Primero, leer la ciencia.</h3>
+          <p>Antes de escribir un titular, leemos los informes, las notas técnicas, la exposición regulatoria. No hay atajos.</p>
         </div>
         <div class="how__step">
           <span class="how__num">02</span>
-          <h3>Averiguar quién está escuchando de verdad.</h3>
-          <p>Un comprador de un retailer nórdico, un técnico de política en Bruselas y un consumidor en Madrid no necesitan la misma frase.</p>
+          <h3>Saber quién está al otro lado.</h3>
+          <p>No habla igual un comprador de un retailer nórdico, un técnico de Bruselas y alguien que hace la compra un sábado. Adaptarlo no es opcional.</p>
         </div>
         <div class="how__step">
           <span class="how__num">03</span>
-          <h3>Escribir como si el lector importara.</h3>
-          <p>Breve cuando puede serlo. Técnico cuando tiene que serlo. Nunca inflado para parecer importante.</p>
+          <h3>Escribir pensando en quien lee.</h3>
+          <p>Corto cuando se puede. Técnico cuando toca. Nunca rellenado para parecer importante.</p>
         </div>
         <div class="how__step">
           <span class="how__num">04</span>
           <h3>Diseñar para que no se pierda nada.</h3>
-          <p>Tipografía, jerarquía, maquetación. El formato forma parte del mensaje — sobre todo cuando el mensaje es complejo.</p>
+          <p>Tipografía, jerarquía, maquetación. El formato forma parte del mensaje, sobre todo si el mensaje es difícil.</p>
         </div>
       </div>
     </div>
@@ -114,31 +134,31 @@
   <section class="services" id="services">
     <div class="container">
       <p class="section-tag">Servicios</p>
-      <h2 class="section-title">Pensado para un sector que se comunica en whitepapers y vive en el lineal del supermercado.</h2>
+      <h2 class="section-title">Pensado para un sector que se comunica en pdfs y vende en el lineal del súper.</h2>
       <div class="services__grid">
         <div class="services__item">
-          <h3>Editorial y contenido de fondo</h3>
-          <p>Informes, whitepapers y contenido de autoridad escritos para leerse, no para archivarse.</p>
+          <h3>Editorial y contenidos de fondo</h3>
+          <p>Informes, whitepapers y artículos de autoría pensados para leerse, no para archivarse.</p>
         </div>
         <div class="services__item">
           <h3>Voz de marca y posicionamiento</h3>
-          <p>Cómo suena tu empresa en un sector donde casi todas suenan igual. Trabajo de base, no un lavado de logo.</p>
+          <p>Cómo suena tu empresa en un sector donde casi todas suenan igual. Trabajo de base, no un cambio de logo.</p>
         </div>
         <div class="services__item">
-          <h3>Narrativas de sostenibilidad</h3>
-          <p>Traducir datos de ESG, certificaciones e impacto a algo que retailers, inversores y medios puedan citar.</p>
+          <h3>Relato de sostenibilidad</h3>
+          <p>Llevar datos de ESG, certificaciones e impacto a algo que retailers, inversores y medios puedan citar.</p>
         </div>
         <div class="services__item">
           <h3>Diseño visual y editorial</h3>
-          <p>Maquetaciones que respetan al lector. Tipografía que pesa. Infografías que significan algo.</p>
+          <p>Maquetaciones que respetan al lector. Tipografía con criterio. Infografías que dicen algo.</p>
         </div>
         <div class="services__item">
           <h3>Web y presencia digital</h3>
-          <p>Webs que explican lo que de verdad haces — en vez de esconderlo tras fotos de stock de redes de pesca.</p>
+          <p>Webs que cuentan lo que hacéis de verdad, sin esconderlo detrás de fotos de stock de redes de pesca.</p>
         </div>
         <div class="services__item">
           <h3>Campañas para audiencias técnicas</h3>
-          <p>Go-to-market para reguladores, compras y compradores B2B. Precisión antes que volumen.</p>
+          <p>Go-to-market para reguladores, compras y B2B. Precisión antes que volumen.</p>
         </div>
       </div>
     </div>
@@ -147,41 +167,41 @@
   <!-- PROJECTS -->
   <section id="work">
     <div class="container">
-      <p class="section-tag" style="color: var(--aqua)">Proyectos seleccionados</p>
+      <p class="section-tag" style="color: var(--aqua)">Proyectos</p>
       <div class="projects__header">
-        <h2 class="section-title">Ejemplos de lo que pasa por el estudio, aunque todavía no podamos dar nombres.</h2>
-        <p>Trabajamos con productores, centros de investigación, entidades certificadoras y empresas en fase temprana. Una muestra de los problemas que llegan a la mesa.</p>
+        <h2 class="section-title">A lo que nos enfrentamos, aunque todavía no podamos poner nombres.</h2>
+        <p>Trabajamos con productores, centros de investigación, certificadoras y empresas en arranque. Un vistazo a los encargos que cruzan la mesa.</p>
       </div>
 
       <div class="projects__list">
         <div class="project">
           <span class="project__index">№ 01</span>
           <span class="project__client">Productora acuícola</span>
-          <span class="project__title">Reescribir un informe de sostenibilidad de 90 páginas para compradores de retail nórdico.</span>
+          <span class="project__title">Pasar una memoria de sostenibilidad de noventa páginas a algo que un comprador de retail nórdico sí lea.</span>
           <span class="project__tag">Editorial · Estrategia</span>
         </div>
         <div class="project">
           <span class="project__index">№ 02</span>
           <span class="project__client">Centro de investigación</span>
-          <span class="project__title">Convertir un estudio revisado por pares en un dossier público de seis páginas.</span>
-          <span class="project__tag">Fondo · Diseño</span>
+          <span class="project__title">Convertir un paper revisado por pares en un dossier público de seis páginas.</span>
+          <span class="project__tag">Contenido · Diseño</span>
         </div>
         <div class="project">
           <span class="project__index">№ 03</span>
-          <span class="project__client">Criadero en fase temprana</span>
-          <span class="project__title">Construir voz de marca y presencia digital antes de la primera cosecha comercial.</span>
+          <span class="project__client">Criadero de primera generación</span>
+          <span class="project__title">Construir voz de marca y web antes de la primera cosecha comercial.</span>
           <span class="project__tag">Marca · Web</span>
         </div>
         <div class="project">
           <span class="project__index">№ 04</span>
           <span class="project__client">Coalición sectorial</span>
-          <span class="project__title">Reenfocar un debate regulatorio para medios generalistas, sin perder la verdad técnica.</span>
+          <span class="project__title">Reformular un debate regulatorio para medios generalistas sin perder el rigor técnico.</span>
           <span class="project__tag">Narrativa · Prensa</span>
         </div>
         <div class="project">
           <span class="project__index">№ 05</span>
           <span class="project__client">Entidad certificadora</span>
-          <span class="project__title">Hacer legible un estándar de trazabilidad para los compradores que tienen que aplicarlo.</span>
+          <span class="project__title">Hacer inteligible un estándar de trazabilidad para quienes lo tienen que aplicar.</span>
           <span class="project__tag">Editorial · Visual</span>
         </div>
       </div>
@@ -191,9 +211,9 @@
   <!-- DIFFERENTIATION -->
   <section class="diff">
     <div class="container">
-      <p class="section-tag">Por qué el nicho importa</p>
+      <p class="section-tag">Por qué un estudio de nicho</p>
       <div class="diff__grid">
-        <h2 class="diff__title">Nicho, <em>por decisión.</em></h2>
+        <h2 class="diff__title">Nicho, <em>a mucha honra.</em></h2>
         <div class="diff__body">
           <p>La mayoría de las agencias acepta cualquier briefing. Nosotras aceptamos los que entendemos. Eso cambia lo que acaba en la página.</p>
           <p>No empezamos googleando tu especie. Ya sabemos la diferencia entre RAS y jaula abierta, entre MSC y ASC, entre gestión pesquera y política pesquera.</p>
@@ -207,19 +227,19 @@
   <section class="style">
     <div class="container">
       <p class="section-tag" style="color: var(--aqua)">Estilo editorial</p>
-      <h2 class="section-title">Un punto de vista sobre cómo debería sonar este sector.</h2>
+      <h2 class="section-title">Una postura sobre cómo debería sonar este sector.</h2>
       <div class="style__grid">
         <div class="style__card">
-          <h3>Editorial, no promocional.</h3>
-          <p>Si se lee como marketing, ya ha perdido a los lectores que más importan — los informados.</p>
+          <h3>Editorial, no publicitario.</h3>
+          <p>Si suena a anuncio, pierdes de entrada a la gente informada. Y la gente informada es la que importa.</p>
         </div>
         <div class="style__card style__card--accent">
           <h3>Investigado, no reciclado.</h3>
-          <p>Sin argumentarios prestados. Cada pieza parte de fuentes primarias y de la gente que hace el trabajo.</p>
+          <p>Nada de mensajes prestados. Cada pieza parte de fuentes primarias y de la gente que está haciendo el trabajo.</p>
         </div>
         <div class="style__card style__card--aqua">
-          <h3>Primero para los de dentro.</h3>
-          <p>Si pasa el filtro de la audiencia técnica, pasa el resto. Al revés no funciona.</p>
+          <h3>Primero, para los de dentro.</h3>
+          <p>Si pasa el filtro técnico, pasa el resto. Al revés no funciona nunca.</p>
         </div>
       </div>
     </div>
@@ -227,15 +247,16 @@
 
   <!-- FOUNDER -->
   <section class="founder" id="founder">
+    <svg class="founder__silhouette" aria-hidden="true"><use href="#sb-silhouette"/></svg>
     <div class="container">
       <p class="section-tag">El estudio</p>
       <div class="founder__grid">
         <div class="founder__portrait" aria-hidden="true"></div>
         <div>
-          <h2 class="founder__title">Dirigido por Nerea Clemente, que pasó años dentro del sector antes de empezar a contar su historia.</h2>
+          <h2 class="founder__title">Dirigido por Nerea Clemente, que llevaba años en el sector antes de ponerse a contarlo.</h2>
           <div class="founder__body">
-            <p>Seaborn Media es pequeño a propósito. Una editora, un punto de vista y un equipo rotatorio de especialistas — diseñadores, investigadores, fotógrafos — que entran cuando el proyecto lo pide.</p>
-            <p>Sin capa de cuentas. Sin plan de medios disfrazado de estrategia. Hablas con quien hace el trabajo.</p>
+            <p>SeaBorn Media es pequeño a propósito. Una editora, un punto de vista y un equipo rotatorio —diseño, investigación, fotografía— que entra cuando el proyecto lo pide.</p>
+            <p>Sin capa de cuentas. Sin plan de medios vestido de estrategia. Hablas con quien hace el trabajo.</p>
           </div>
           <p class="founder__signature">— Fundadora y editora</p>
         </div>
@@ -247,10 +268,13 @@
   <section class="cta" id="contact">
     <div class="container">
       <div class="cta__inner">
-        <p class="section-tag">Empieza aquí</p>
-        <h2 class="cta__title">¿Tienes algo complejo que explicar?</h2>
-        <p class="cta__sub">Mándanos lo que tengas — un borrador, un informe, un briefing, una idea a medio formar. Te decimos qué merece contarse y cómo.</p>
-        <a href="mailto:hola@seaborn.media" class="cta__button">hola@seaborn.media</a>
+        <p class="section-tag">Por dónde empezar</p>
+        <h2 class="cta__title">¿Tienes algo difícil de explicar?</h2>
+        <p class="cta__sub">Mándanos lo que tengas. Un borrador, una memoria, un briefing o una idea a medias. Te decimos qué merece la pena contar y cómo.</p>
+        <div class="cta__actions">
+          <a href="mailto:hola@seabornmedia.com" class="cta__button">hola@seabornmedia.com</a>
+          <a href="tel:+34635369915" class="cta__tel">635 369 915</a>
+        </div>
       </div>
     </div>
   </section>
@@ -259,34 +283,39 @@
 
 <!-- FOOTER -->
 <footer class="footer">
+  <svg class="footer__silhouette" aria-hidden="true"><use href="#sb-silhouette"/></svg>
   <div class="container">
     <div class="footer__grid">
       <div>
-        <p class="footer__brand">Seaborn<span style="color: var(--aqua)">.</span> Media</p>
-        <p class="footer__tag">Un estudio editorial para seafood, acuicultura y sistemas alimentarios.</p>
+        <a href="#top" class="footer__brand">
+          <svg class="footer__mark" aria-hidden="true"><use href="#sb-mark"/></svg>
+          <span>Sea<strong>Born</strong><sup>media</sup></span>
+        </a>
+        <p class="footer__tag">Estudio editorial para seafood, acuicultura y sistemas alimentarios.</p>
       </div>
       <div class="footer__col">
         <h5>Estudio</h5>
         <a href="#work">Proyectos</a>
         <a href="#how">Método</a>
         <a href="#services">Servicios</a>
-        <a href="#founder">Sobre nosotras</a>
+        <a href="#founder">Sobre el estudio</a>
       </div>
       <div class="footer__col">
         <h5>Contacto</h5>
-        <a href="mailto:hola@seaborn.media">hola@seaborn.media</a>
+        <a href="mailto:hola@seabornmedia.com">hola@seabornmedia.com</a>
+        <a href="tel:+34635369915">635 369 915</a>
         <p>Entre Galicia y Oslo</p>
       </div>
       <div class="footer__col">
-        <h5>También aquí</h5>
+        <h5>Redes</h5>
         <a href="#">LinkedIn</a>
         <a href="#">Substack</a>
-        <a href="#">Instagram</a>
+        <a href="#">Instagram · @seaborn.media</a>
       </div>
     </div>
     <div class="footer__meta">
-      <span>© 2026 Seaborn Media. Todos los derechos reservados.</span>
-      <span>Diseñado con criterio editorial. Escrito con cuidado.</span>
+      <span>© 2026 SeaBorn Media. Todos los derechos reservados.</span>
+      <span>Contado con criterio. Diseñado con cuidado.</span>
     </div>
   </div>
 </footer>
