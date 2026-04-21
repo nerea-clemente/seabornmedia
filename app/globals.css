@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* ===================================================================
+   Brand tokens — Tailwind v4 theme.
+   Anything declared inside @theme becomes a Tailwind utility:
+   --color-navy-deep -> bg-navy-deep, text-navy-deep, etc.
+=================================================================== */
+@theme {
+  --color-navy-deep: #2D4A6B;
+  --color-navy-darker: #233B57;
+  --color-coral: #F2A087;
+  --color-sky: #9DB8E8;
+  --color-teal: #3BA195;
+  --color-cream: #FCE8DF;
+  --color-ink: #1A2B40;
+  --color-paper: #FFFFFF;
+
+  --font-display: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.5rem;
+}
+
+/* ===================================================================
+   Base
+=================================================================== */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-coral);
+  color: var(--color-ink);
+}
+
+/* Section anchors offset for sticky nav */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Focus ring — coral, visible, accessible */
+:focus-visible {
+  outline: 2px solid var(--color-coral);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Display headings get the geometric sans */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Hero title scaling */
+.h-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-size: clamp(2.75rem, 8vw, 6rem);
+}
