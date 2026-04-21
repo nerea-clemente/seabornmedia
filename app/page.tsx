@@ -1,10 +1,14 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
-import { ParaQuien } from "@/components/ParaQuien";
+import { QueHacemos } from "@/components/QueHacemos";
+import { Problema } from "@/components/Problema";
+import { Metodo } from "@/components/Metodo";
 import { Servicios } from "@/components/Servicios";
-import { PorQueNicho } from "@/components/PorQueNicho";
-import { Proceso } from "@/components/Proceso";
-import { Contacto } from "@/components/Contacto";
+import { Proyectos } from "@/components/Proyectos";
+import { Nicho } from "@/components/Nicho";
+import { Estilo } from "@/components/Estilo";
+import { Estudio } from "@/components/Estudio";
+import { Cta } from "@/components/Cta";
 import { Footer } from "@/components/Footer";
 
 export default function Page() {
@@ -13,11 +17,15 @@ export default function Page() {
       <Nav />
       <main>
         <Hero />
-        <ParaQuien />
+        <QueHacemos />
+        <Problema />
+        <Metodo />
         <Servicios />
-        <PorQueNicho />
-        <Proceso />
-        <Contacto />
+        <Proyectos />
+        <Nicho />
+        <Estilo />
+        <Estudio />
+        <Cta />
       </main>
       <Footer />
     </>
