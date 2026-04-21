@@ -59,12 +59,25 @@ Decisiones tomadas durante el primer pase. Revisar y revertir las que no encajen
 - `next/image` y CMS. La web no necesita imágenes en v1.
 - robots.txt / sitemap.xml. Trivial añadir cuando se decida la URL definitiva.
 
+## Despliegue
+
+- **Vercel**: deploy directo. `output: 'export'` es compatible, no necesita configuración extra.
+- **GitHub Pages** (`nerea-clemente.github.io/seabornmedia/`): workflow en
+  `.github/workflows/pages.yml` que corre en cada push a
+  `claude/refine-design-system-ROioU` y `main`. Hace `pnpm build` con
+  `GITHUB_PAGES=true` para activar `basePath: '/seabornmedia'`, copia
+  `.nojekyll` al `out/` y despliega el artefacto.
+  - Requisito manual una vez: **Settings → Pages → Source = "GitHub Actions"**.
+    Si está en "Deploy from a branch", el workflow no puede publicar.
+  - `public/.nojekyll` evita que Jekyll ignore la carpeta `_next/`.
+
 ## Para ejecutar
 
 ```bash
 pnpm install
-pnpm dev      # http://localhost:3000
-pnpm build    # producción
+pnpm dev                      # http://localhost:3000
+pnpm build                    # export estático (Vercel / raíz)
+GITHUB_PAGES=true pnpm build  # export estático con basePath /seabornmedia
 ```
 
-Build en limpio: 107 kB First Load JS, todo prerender estático.
+Build en limpio: 107 kB First Load JS, todo prerender estático en `out/`.
