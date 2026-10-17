@@ -3,16 +3,15 @@ import Image from "next/image";
 export default function Page() {
   return (
     <main className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-navy text-paper">
-      {/* Isotipo gigante como marca de agua — igual que el brand book */}
+      {/* Aleta oficial como marca de agua — path extraído de aletas/aleta-1.svg */}
       <svg
         aria-hidden
-        viewBox="0 0 100 100"
-        className="pointer-events-none absolute -right-[22%] top-1/2 h-[160%] w-[90%] -translate-y-1/2 opacity-[0.07] sm:-right-[12%] sm:w-[70%] md:opacity-[0.09]"
+        viewBox="0 0 1536 1536"
+        className="pointer-events-none absolute -right-[22%] top-1/2 h-[160%] w-[90%] -translate-y-1/2 text-teal opacity-[0.14] sm:-right-[10%] sm:w-[70%] sm:opacity-[0.18]"
       >
-        <circle cx="50" cy="50" r="46" fill="var(--color-paper)" />
         <path
-          d="M50 20 C 46 44, 36 54, 22 56 L 50 80 L 78 56 C 64 54, 54 44, 50 20 Z"
-          fill="var(--color-navy)"
+          fill="currentColor"
+          d="M 1298.054688 1298.546875 C 1055.027344 1541.574219 686.992188 1582.199219 401.3125 1421.855469 C 402.292969 1420.613281 403.339844 1419.503906 404.253906 1418.261719 C 429.984375 1416.761719 456.503906 1418.980469 483.019531 1422.769531 C 501.960938 1425.054688 520.902344 1428.84375 539.125 1433.351562 C 790.640625 1495.460938 1054.898438 1396.253906 1226.144531 1200.835938 C 1212.496094 1184.183594 1198.84375 1169.03125 1183.757812 1153.878906 C 1092.84375 1062.960938 979.984375 998.628906 847.464844 959.964844 C 775.488281 939.523438 702.011719 926.589844 625.53125 921.300781 C 644.472656 820.523438 648.980469 720.59375 639.183594 621.320312 C 624.8125 461.5 568.773438 322.121094 472.570312 204.753906 C 418.035156 236.5625 368.003906 275.945312 324.113281 319.835938 C 187.742188 456.210938 106.753906 641.695312 118.117188 836.457031 C 118.835938 855.398438 118.835938 875.125 118.117188 894 C 116.617188 933.449219 109.824219 972.046875 99.179688 1008.363281 C 93.953125 1027.433594 87.03125 1045.917969 79.519531 1064.203125 C -38.238281 790.675781 14.207031 461.566406 237.640625 238.128906 C 530.503906 -54.730469 1005.257812 -54.730469 1298.121094 238.128906 C 1590.980469 530.992188 1590.980469 1005.75 1298.121094 1298.609375 Z"
         />
       </svg>
 
@@ -27,7 +26,6 @@ export default function Page() {
         {/* Bloque central */}
         <div className="flex flex-1 flex-col justify-center">
           <div className="max-w-3xl">
-            {/* Logo oficial */}
             <Image
               src="/logo.svg"
               alt="SeaBorn Media"
@@ -37,7 +35,6 @@ export default function Page() {
               className="h-auto w-[min(80vw,520px)]"
             />
 
-            {/* Tagline */}
             <h1 className="mt-10 max-w-[20ch] font-display text-[clamp(2.1rem,6vw,3.75rem)] font-extrabold leading-[1.05] tracking-tight text-paper">
               Tu agencia de marketing y comunicación{" "}
               <span className="text-coral">seafood.</span>
@@ -47,7 +44,6 @@ export default function Page() {
               Estamos preparando algo pensado para marcas de pesca, acuicultura y seafood. Si no quieres esperar, cuéntanos tu proyecto.
             </p>
 
-            {/* Contacto */}
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
               <a
                 href="mailto:hola@seabornmedia.com"
@@ -70,7 +66,6 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Pie — meta minimal */}
         <footer className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-sky/15 pt-6 text-[11px] uppercase tracking-[0.18em] text-sky/70">
           <span>SeaBorn Media · {new Date().getFullYear()}</span>
           <span>Galicia · Oslo</span>
