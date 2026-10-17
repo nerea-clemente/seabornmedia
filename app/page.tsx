@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function Page() {
   return (
     <main className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-navy text-paper">
-      {/* Aleta oficial como marca de agua — path extraído de aletas/aleta-1.svg */}
+      {/* Aleta oficial como marca de agua — shade sobre shade, como la portada del brand book */}
       <svg
         aria-hidden
         viewBox="0 0 1536 1536"
-        className="pointer-events-none absolute -right-[22%] top-1/2 h-[160%] w-[90%] -translate-y-1/2 text-teal opacity-[0.14] sm:-right-[10%] sm:w-[70%] sm:opacity-[0.18]"
+        className="pointer-events-none absolute -right-[22%] top-1/2 h-[160%] w-[90%] -translate-y-1/2 text-navy-dark opacity-100 sm:-right-[10%] sm:w-[70%]"
       >
         <path
           fill="currentColor"
@@ -17,12 +17,6 @@ export default function Page() {
 
       {/* Contenido */}
       <div className="relative z-10 flex flex-1 flex-col px-6 py-10 sm:px-10 sm:py-12">
-        {/* Pill arriba a la izquierda */}
-        <p className="inline-flex w-fit items-center gap-2.5 rounded-full border border-sky/30 bg-sky/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-sky backdrop-blur-sm sm:text-xs">
-          <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-coral" />
-          Próximamente
-        </p>
-
         {/* Bloque central */}
         <div className="flex flex-1 flex-col justify-center">
           <div className="max-w-3xl">
