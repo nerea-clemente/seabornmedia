@@ -1,12 +1,9 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
-import { QueHacemos } from "@/components/QueHacemos";
-import { Problema } from "@/components/Problema";
-import { Metodo } from "@/components/Metodo";
 import { Servicios } from "@/components/Servicios";
+import { Hablamos } from "@/components/Hablamos";
+import { Metodo } from "@/components/Metodo";
 import { Proyectos } from "@/components/Proyectos";
-import { Nicho } from "@/components/Nicho";
-import { Estilo } from "@/components/Estilo";
 import { Estudio } from "@/components/Estudio";
 import { Cta } from "@/components/Cta";
 import { Footer } from "@/components/Footer";
@@ -17,13 +14,10 @@ export default function Page() {
       <Nav />
       <main>
         <Hero />
-        <QueHacemos />
-        <Problema />
-        <Metodo />
         <Servicios />
+        <Hablamos />
+        <Metodo />
         <Proyectos />
-        <Nicho />
-        <Estilo />
         <Estudio />
         <Cta />
       </main>

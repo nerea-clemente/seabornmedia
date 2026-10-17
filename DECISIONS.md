@@ -81,3 +81,44 @@ GITHUB_PAGES=true pnpm build  # export estático con basePath /seabornmedia
 ```
 
 Build en limpio: 107 kB First Load JS, todo prerender estático en `out/`.
+
+## v2 — Agencia de marketing con fotografía (pivote visual)
+
+Pivote tras feedback con dos referencias de Canva/web. La web ya no se lee como "estudio editorial puro" sino como **agencia de marketing con imagen fuerte del sector**. Mantengo tokens de marca y tipografía; cambia estructura, componentes y copy.
+
+### Secciones
+
+Hero · Servicios · Hablamos (por qué) · Método · Proyectos · Estudio · CTA · Footer.
+
+- **Hero** split: texto a la izquierda (titular con `em` coral), `PhotoCrescent` a la derecha, strip de pills abajo.
+- **Servicios**: cuatro tarjetas con `IconBubble` circular en navy / coral / sky / teal + título + 2 líneas.
+- **Hablamos**: fondo navy, `PhotoCrescent` espejado a la izquierda, cuatro bullets con `IconBubble` tono "navy-soft" a la derecha.
+- **Método**: timeline horizontal con pasos numerados en coral/sky/teal/navy conectados por línea discontinua.
+- **Proyectos**: lista editorial tabulada (№ · cliente · título · tag), hover cream.
+- **Estudio**: `PhotoCrescent` en variante `fjord` + bio + meta (base, idiomas, disponibilidad).
+- **CTA**: navy a sangre, overlay de `OceanTile surface`, título centrado grande.
+
+### Fotografía (importante)
+
+El proxy del sandbox bloquea CDNs externos (Unsplash, etc.), así que las "fotos" son **composiciones SVG abstractas** (`OceanTile`) en cuatro variantes: `underwater`, `shoal`, `fjord`, `surface`. Usan la paleta de marca y leen como fotografía estilizada, pero son placeholders.
+
+**Para sustituir por fotos reales:**
+1. Dejar los `.jpg`/`.webp` en `public/images/` (ej. `public/images/hero.jpg`).
+2. En `components/ui/PhotoCrescent.tsx`, cambiar `<OceanTile>` por `<img src="/images/hero.jpg" />` con `className="h-full w-full object-cover"`.
+3. Opcional: pasar la ruta como prop desde `content.ts` (ya hay un slot `photo` en cada sección).
+
+### Logo
+
+- `BrandMark.tsx`: círculo coral con silueta de aleta/raya en navy oscuro, replicando el logo del template corporativo.
+- `Wordmark.tsx`: `BrandMark` + "Sea**Born**" con "media" en superíndice coral.
+- Mismo mark en `app/icon.svg` → Next lo publica como favicon automáticamente.
+
+### Iconos
+
+Un único componente `Icon` con nueve iconos line-style (chart, pen, mega, leaf, waves, bulb, people, compass, talk) y un helper `IconBubble` que lo pone dentro de un pill circular con fondo de marca. Sin librería de iconos.
+
+### Lo que me he cargado deliberadamente
+
+- `QueHacemos`, `Problema`, `Nicho`, `Estilo` (editorial, 4 secciones) → consolidadas en una sola **Hablamos** más visual.
+- `CrescentShape` sigue en el repo como utilidad pero ya no se usa en v2.
+- Portrait de gradiente ("blob") de la fundadora → sustituido por `PhotoCrescent`.

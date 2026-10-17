@@ -1,55 +1,51 @@
 import { Container } from "@/components/ui/Container";
-import { CrescentShape } from "@/components/ui/CrescentShape";
+import { PhotoCrescent } from "@/components/ui/PhotoCrescent";
 import { estudio } from "@/lib/content";
 
 export function Estudio() {
   return (
     <section
       id="estudio"
-      className="relative isolate overflow-hidden bg-navy-deep text-paper py-24 sm:py-32"
+      className="relative isolate overflow-hidden bg-cream py-24 sm:py-32"
     >
-      <CrescentShape
-        variant="fluke"
-        tone="navy"
-        opacity={0.4}
-        className="left-[30%] -top-[25%] h-[90%] w-[60%]"
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-[20%] top-[20%] h-[70%] w-[55%] rounded-full opacity-30"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, var(--color-sky), transparent 65%)",
+        }}
       />
 
       <Container className="relative z-10">
-        <p className="mb-8 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-coral">
-          <span className="h-px w-7 bg-coral" />
-          {estudio.eyebrow}
-        </p>
-
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-16">
-          {/* Portrait placeholder — abstract gradient, no stock photo */}
-          <div
-            className="relative aspect-[4/5] overflow-hidden rounded-3xl"
-            aria-hidden
-            style={{
-              background: `
-                radial-gradient(circle at 35% 30%, var(--color-coral), transparent 55%),
-                radial-gradient(circle at 75% 75%, var(--color-teal), transparent 50%),
-                linear-gradient(160deg, var(--color-sky), #7ba6b8)
-              `,
-            }}
-          >
-            <span className="absolute bottom-5 right-5 text-xs font-semibold tracking-[0.2em] text-ink">
-              {estudio.initials}
-            </span>
-          </div>
+        <div className="grid items-center gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+          <PhotoCrescent variant={estudio.photo.variant} className="mx-auto max-w-[460px] lg:max-w-none" />
 
           <div>
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.6rem] font-extrabold leading-[1.15] tracking-tight text-paper max-w-[30ch]">
+            <p className="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+              <span className="h-px w-7 bg-teal" />
+              {estudio.eyebrow}
+            </p>
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.6rem] font-extrabold leading-[1.15] tracking-tight text-ink max-w-[30ch]">
               {estudio.title}
             </h2>
-            <div className="mt-8 space-y-4 max-w-[50ch]">
+            <div className="mt-7 max-w-[52ch] space-y-4">
               {estudio.body.map((p, i) => (
-                <p key={i} className="text-base sm:text-lg leading-relaxed text-sky">
+                <p key={i} className="text-base sm:text-lg leading-relaxed text-ink/75">
                   {p}
                 </p>
               ))}
             </div>
+
+            <dl className="mt-10 grid gap-y-3 gap-x-8 border-t border-ink/15 pt-6 sm:grid-cols-3">
+              {estudio.meta.map((m) => (
+                <div key={m.k}>
+                  <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/50">{m.k}</dt>
+                  <dd className="mt-1 text-sm font-medium text-ink">{m.v}</dd>
+                </div>
+              ))}
+            </dl>
+
             <p className="mt-8 text-xs font-semibold uppercase tracking-[0.22em] text-coral">
               {estudio.signature}
             </p>

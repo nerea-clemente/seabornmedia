@@ -1,18 +1,18 @@
 // Todo el copy de la web vive aquí. Editar aquí, no en JSX.
 
 export const site = {
-  name: "Seaborn Media",
+  name: "SeaBorn Media",
   wordmark: { soft: "Sea", bold: "Born", super: "media" },
   description:
-    "Estudio editorial para el sector seafood, pesca y acuicultura.",
+    "Marketing y contenidos para marcas del sector seafood, pesca y acuicultura.",
   url: "https://www.seabornmedia.com",
   email: "hola@seabornmedia.com",
   phone: "+34635369915",
   phoneDisplay: "635 369 915",
   social: {
     instagram: { handle: "@seaborn.media", url: "https://instagram.com/seaborn.media" },
-    linkedin: { handle: "Seaborn Media", url: "https://linkedin.com/company/seabornmedia" },
-    substack: { handle: "Seaborn", url: "https://seabornmedia.substack.com" },
+    linkedin: { handle: "SeaBorn Media", url: "https://linkedin.com/company/seabornmedia" },
+    substack: { handle: "SeaBorn", url: "https://seabornmedia.substack.com" },
     tiktok: { handle: "@seaborn.media", url: "https://tiktok.com/@seaborn.media" },
   },
   ogImage: "/og.png",
@@ -20,211 +20,167 @@ export const site = {
 
 export const nav = {
   links: [
-    { href: "#proyectos", label: "Proyectos" },
-    { href: "#metodo", label: "Método" },
     { href: "#servicios", label: "Servicios" },
-    { href: "#estudio", label: "Estudio" },
+    { href: "#nosotras", label: "Nosotras" },
+    { href: "#proyectos", label: "Proyectos" },
+    { href: "#metodo", label: "Proceso" },
   ],
-  cta: { href: "#contacto", label: "Cuéntame un proyecto" },
+  cta: { href: "#contacto", label: "Hablemos" },
 } as const;
 
 export const hero = {
-  eyebrow: "Agencia editorial · Seafood · Acuicultura · Sistemas alimentarios",
+  eyebrow: "Marketing para el sector del mar",
   titleLines: [
     { text: "El sector sabe ", em: "de mar." },
     { text: "Nosotras, ", em: "de contarlo." },
   ],
-  body: [
-    "Seaborn Media es un estudio editorial pensado para un sector que hasta ahora se ha comunicado sobre todo hacia dentro.",
-    "Trabajamos con quienes producen, investigan y regulan lo que viene del mar. Y escribimos —y diseñamos— para el resto.",
-  ],
-} as const;
-
-export const queHacemos = {
-  eyebrow: "Qué hacemos",
-  lede:
-    "Traducimos un sector técnico al idioma del retail, los medios, la administración y quien se come lo que producís.",
-  body: [
-    "No somos una agencia generalista. Trabajamos solo con seafood, acuicultura y sistemas alimentarios, con la profundidad que el tema pide.",
-    "La ciencia se convierte en contenido. Los datos, en relato. Y una de las industrias más importantes del planeta deja de leerse como un informe regulatorio.",
-  ],
-} as const;
-
-export const problema = {
-  eyebrow: "El problema",
-  title: [
-    { text: "Al sector no le faltan ", em: "argumentos." },
-    { text: "Le falta ", em: "relato." },
-  ],
-  items: [
-    {
-      n: "01",
-      label: "Datos",
-      body:
-        "Los números están ahí. Rendimientos, trazabilidad, huella, mortalidades. Enterrados en memorias anuales que no abre casi nadie.",
-    },
-    {
-      n: "02",
-      label: "Ciencia",
-      body:
-        "La investigación es sólida. Pero se queda atrapada en revistas de acceso cerrado, siglas y pdfs de noventa páginas que ningún comprador va a leer.",
-    },
-    {
-      n: "03",
-      label: "Voz",
-      body:
-        "Lo que no hay es voz. Así que consumidores, medios y legisladores le acaban escribiendo la historia al sector por su cuenta.",
-    },
-  ],
-} as const;
-
-export const metodo = {
-  eyebrow: "Cómo trabajamos",
-  title: "Un método que viene del periodismo, no de la publicidad.",
-  intro:
-    "La mayoría de las agencias llega con una plantilla. Nosotras llegamos con bibliografía. El seafood no necesita gritar más fuerte. Necesita que se le explique bien.",
-  steps: [
-    {
-      n: "01",
-      title: "Primero, leer la ciencia.",
-      body:
-        "Antes de escribir un titular, leemos los informes, las notas técnicas, la exposición regulatoria. No hay atajos.",
-    },
-    {
-      n: "02",
-      title: "Saber quién está al otro lado.",
-      body:
-        "No habla igual un comprador de un retailer nórdico, un técnico de Bruselas y alguien que hace la compra un sábado. Adaptarlo no es opcional.",
-    },
-    {
-      n: "03",
-      title: "Escribir pensando en quien lee.",
-      body:
-        "Corto cuando se puede. Técnico cuando toca. Nunca rellenado para parecer importante.",
-    },
-    {
-      n: "04",
-      title: "Diseñar para que no se pierda nada.",
-      body:
-        "Tipografía, jerarquía, maquetación. El formato forma parte del mensaje, sobre todo si el mensaje es difícil.",
-    },
-  ],
+  body:
+    "Estudio de marketing y contenidos para marcas de seafood, pesca y acuicultura que quieren dejar de hablar solo entre técnicos.",
+  cta: { label: "Hablemos de tu proyecto", href: "#contacto" },
+  pills: ["Estrategia", "Contenido", "Marca", "Comunicación", "Crecimiento"],
+  photo: { variant: "underwater", alt: "Composición abstracta de agua y luz" },
 } as const;
 
 export const servicios = {
-  eyebrow: "Servicios",
-  title: "Pensado para un sector que se comunica en pdfs y vende en el lineal del súper.",
+  eyebrow: "Nuestros servicios",
+  title: [
+    { text: "Soluciones de marketing ", em: null },
+    { text: "", em: "diseñadas para el sector seafood." },
+  ],
+  subtitle:
+    "Combinamos conocimiento del sector con criterio editorial. Para que lo que haces se entienda, se cite y se recuerde.",
+  moreCta: { label: "Ver todos los servicios", href: "#servicios" },
   items: [
     {
-      title: "Editorial y contenidos de fondo",
-      body:
-        "Informes, whitepapers y artículos de autoría pensados para leerse, no para archivarse.",
+      icon: "chart",
+      tone: "navy" as const,
+      title: "Estrategia de marketing",
+      body: "Planes a medida para alcanzar objetivos reales en un sector en movimiento constante.",
     },
     {
-      title: "Voz de marca y posicionamiento",
-      body:
-        "Cómo suena tu empresa en un sector donde casi todas suenan igual. Trabajo de base, no un cambio de logo.",
+      icon: "pen",
+      tone: "coral" as const,
+      title: "Contenido y storytelling",
+      body: "Historias que conectan, informan y posicionan tu marca sin sonar a folleto.",
     },
     {
-      title: "Relato de sostenibilidad",
-      body:
-        "Llevar datos de ESG, certificaciones e impacto a algo que retailers, inversores y medios puedan citar.",
+      icon: "mega",
+      tone: "sky" as const,
+      title: "Comunicación digital",
+      body: "Redes, campañas, email y presencia online. Pensados para tu audiencia real.",
     },
     {
-      title: "Diseño visual y editorial",
-      body:
-        "Maquetaciones que respetan al lector. Tipografía con criterio. Infografías que dicen algo.",
+      icon: "leaf",
+      tone: "teal" as const,
+      title: "Marca y diseño",
+      body: "Identidad visual y materiales que reflejan el valor de tu empresa y del mundo del mar.",
+    },
+  ],
+} as const;
+
+export const hablamos = {
+  eyebrow: "Por qué SeaBorn Media",
+  title: [
+    { text: "Entendemos el sector ", em: null },
+    { text: "porque ", em: "hablamos su idioma." },
+  ],
+  body:
+    "No empezamos googleando tu especie. Sabemos la diferencia entre RAS y jaula abierta, entre MSC y ASC, entre gestión pesquera y política pesquera. Y eso cambia lo que acaba en la página.",
+  bullets: [
+    {
+      icon: "waves",
+      title: "Conocimiento del sector.",
+      body: "Experiencia real en seafood, acuicultura y pesca.",
     },
     {
-      title: "Web y presencia digital",
-      body:
-        "Webs que cuentan lo que hacéis de verdad, sin esconderlo detrás de fotos de stock de redes de pesca.",
+      icon: "bulb",
+      title: "Enfoque editorial.",
+      body: "Investigado, no reciclado. Y pensado para quien lee.",
     },
     {
-      title: "Campañas para audiencias técnicas",
-      body:
-        "Go-to-market para reguladores, compras y B2B. Precisión antes que volumen.",
+      icon: "people",
+      title: "Acompañamiento cercano.",
+      body: "Hablas con quien hace el trabajo. Sin capa de cuentas.",
+    },
+    {
+      icon: "chart",
+      title: "Resultados medibles.",
+      body: "Lo que no se mide, no se mejora. Y eso también lo contamos.",
+    },
+  ],
+  photo: { variant: "shoal", alt: "Composición abstracta de banco de peces" },
+} as const;
+
+export const metodo = {
+  eyebrow: "Nuestro proceso",
+  title: [
+    { text: "De la idea ", em: "al impacto." },
+  ],
+  intro:
+    "Un proceso claro, colaborativo y adaptado al sector. Sin reuniones de relleno, con entregas que se pueden enseñar.",
+  steps: [
+    {
+      n: "01",
+      tone: "navy" as const,
+      title: "Escuchamos.",
+      body: "Conocemos tu negocio, tus objetivos y tu contexto. Y leemos lo que ya tienes publicado.",
+    },
+    {
+      n: "02",
+      tone: "coral" as const,
+      title: "Diseñamos.",
+      body: "Decidimos qué contar, a quién y por dónde. Una estrategia corta, útil y accionable.",
+    },
+    {
+      n: "03",
+      tone: "sky" as const,
+      title: "Ejecutamos.",
+      body: "Convertimos la estrategia en piezas reales: contenidos, campañas, diseño, prensa.",
+    },
+    {
+      n: "04",
+      tone: "teal" as const,
+      title: "Medimos.",
+      body: "Analizamos resultados, afinamos lo que funciona y descartamos lo que no.",
     },
   ],
 } as const;
 
 export const proyectos = {
   eyebrow: "Proyectos",
-  title: "A lo que nos enfrentamos, aunque todavía no podamos poner nombres.",
+  title: "Lo que cruza la mesa cada semana.",
   subtitle:
-    "Trabajamos con productores, centros de investigación, certificadoras y empresas en arranque. Un vistazo a los encargos que cruzan la mesa.",
+    "Productores, centros de investigación, certificadoras y empresas en arranque. Una muestra. Sin nombres, todavía.",
   items: [
     {
       n: "№ 01",
       client: "Productora acuícola",
-      title:
-        "Pasar una memoria de sostenibilidad de noventa páginas a algo que un comprador de retail nórdico sí lea.",
+      title: "Una memoria de sostenibilidad de noventa páginas, convertida en algo que el comprador del retail nórdico sí lee.",
       tag: "Editorial · Estrategia",
     },
     {
       n: "№ 02",
       client: "Centro de investigación",
-      title:
-        "Convertir un paper revisado por pares en un dossier público de seis páginas.",
+      title: "Un paper revisado por pares, en un dossier público de seis páginas.",
       tag: "Contenido · Diseño",
     },
     {
       n: "№ 03",
       client: "Criadero de primera generación",
-      title:
-        "Construir voz de marca y web antes de la primera cosecha comercial.",
+      title: "Voz de marca y web antes de la primera cosecha comercial.",
       tag: "Marca · Web",
     },
     {
       n: "№ 04",
       client: "Coalición sectorial",
-      title:
-        "Reformular un debate regulatorio para medios generalistas sin perder el rigor técnico.",
+      title: "Un debate regulatorio reformulado para medios generalistas, sin perder el rigor técnico.",
       tag: "Narrativa · Prensa",
     },
     {
       n: "№ 05",
       client: "Entidad certificadora",
-      title:
-        "Hacer inteligible un estándar de trazabilidad para quienes lo tienen que aplicar.",
+      title: "Un estándar de trazabilidad hecho legible para quien lo tiene que aplicar.",
       tag: "Editorial · Visual",
-    },
-  ],
-} as const;
-
-export const nicho = {
-  eyebrow: "Por qué un estudio de nicho",
-  title: [
-    { text: "Nicho, ", em: "a mucha honra." },
-  ],
-  body: [
-    "La mayoría de las agencias acepta cualquier briefing. Nosotras aceptamos los que entendemos. Eso cambia lo que acaba en la página.",
-    "No empezamos googleando tu especie. Ya sabemos la diferencia entre RAS y jaula abierta, entre MSC y ASC, entre gestión pesquera y política pesquera.",
-  ],
-  punchline: "De eso va todo esto.",
-} as const;
-
-export const estilo = {
-  eyebrow: "Estilo editorial",
-  title: "Una postura sobre cómo debería sonar este sector.",
-  cards: [
-    {
-      title: "Editorial, no publicitario.",
-      body:
-        "Si suena a anuncio, pierdes de entrada a la gente informada. Y la gente informada es la que importa.",
-      accent: "ink",
-    },
-    {
-      title: "Investigado, no reciclado.",
-      body:
-        "Nada de mensajes prestados. Cada pieza parte de fuentes primarias y de la gente que está haciendo el trabajo.",
-      accent: "coral",
-    },
-    {
-      title: "Primero, para los de dentro.",
-      body:
-        "Si pasa el filtro técnico, pasa el resto. Al revés no funciona nunca.",
-      accent: "teal",
     },
   ],
 } as const;
@@ -232,34 +188,41 @@ export const estilo = {
 export const estudio = {
   eyebrow: "El estudio",
   title:
-    "Dirigido por Nerea Clemente, que llevaba años en el sector antes de ponerse a contarlo.",
+    "Dirigido por Nerea Clemente, que llevaba años dentro del sector antes de ponerse a contarlo.",
   body: [
-    "Seaborn Media es pequeño a propósito. Una editora, un punto de vista y un equipo rotatorio —diseño, investigación, fotografía— que entra cuando el proyecto lo pide.",
-    "Sin capa de cuentas. Sin plan de medios vestido de estrategia. Hablas con quien hace el trabajo.",
+    "SeaBorn Media es pequeño a propósito. Una editora, un punto de vista, y un equipo rotatorio —diseño, investigación, fotografía— que entra cuando el proyecto lo pide.",
+    "Sin capa de cuentas. Sin plan de medios disfrazado de estrategia. Hablas con quien hace el trabajo.",
   ],
   signature: "— Fundadora y editora",
-  initials: "NC",
+  meta: [
+    { k: "Base", v: "Galicia · Oslo" },
+    { k: "Idiomas", v: "ES · EN · NO" },
+    { k: "Disponibilidad", v: "Dos proyectos al trimestre" },
+  ],
+  photo: { variant: "fjord", alt: "Composición abstracta de fiordo y agua" },
 } as const;
 
 export const cta = {
-  eyebrow: "Por dónde empezar",
-  title: "¿Tienes algo difícil de explicar?",
-  subtitle:
-    "Mándanos lo que tengas. Un borrador, una memoria, un briefing o una idea a medias. Te decimos qué merece la pena contar y cómo.",
-  emailLabel: site.email,
-  telLabel: site.phoneDisplay,
+  eyebrow: "Hablemos",
+  title: [
+    { text: "¿Lista para llevar tu marca ", em: null },
+    { text: "", em: "del mar más lejos?" },
+  ],
+  subtitle: "Mándanos lo que tengas. Un borrador, una memoria, un briefing o una idea a medias. Te respondemos en menos de 48 horas.",
+  cta: { label: "Hablemos", href: "mailto:hola@seabornmedia.com" },
+  secondary: { label: "o escríbenos directamente", href: "mailto:hola@seabornmedia.com" },
 } as const;
 
 export const footer = {
-  tagline: "Estudio editorial para seafood, acuicultura y sistemas alimentarios.",
+  tagline: "Marketing y contenidos para un futuro más azul.",
   columns: [
     {
       title: "Estudio",
       links: [
-        { href: "#proyectos", label: "Proyectos" },
-        { href: "#metodo", label: "Método" },
         { href: "#servicios", label: "Servicios" },
-        { href: "#estudio", label: "Sobre el estudio" },
+        { href: "#nosotras", label: "Nosotras" },
+        { href: "#proyectos", label: "Proyectos" },
+        { href: "#metodo", label: "Proceso" },
       ],
     },
   ],
@@ -275,11 +238,11 @@ export const footer = {
     title: "Redes",
     items: [
       { label: "LinkedIn", href: site.social.linkedin.url },
+      { label: "Instagram", href: site.social.instagram.url },
       { label: "Substack", href: site.social.substack.url },
-      { label: `Instagram · ${site.social.instagram.handle}`, href: site.social.instagram.url },
     ],
   },
-  legal: `© ${new Date().getFullYear()} Seaborn Media. Todos los derechos reservados.`,
+  legal: `© ${new Date().getFullYear()} SeaBorn Media. Todos los derechos reservados.`,
   smallprint: "Contado con criterio. Diseñado con cuidado.",
 } as const;
 

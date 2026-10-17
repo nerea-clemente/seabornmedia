@@ -4,22 +4,22 @@ import { footer } from "@/lib/content";
 
 export function Footer() {
   return (
-    <footer className="bg-navy-darker text-paper py-16 sm:py-20">
+    <footer className="bg-navy-darker text-paper py-14 sm:py-16">
       <Container>
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] border-b border-paper/15 pb-12">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr] border-b border-paper/15 pb-12">
           <div>
             <Wordmark size="md" />
-            <p className="mt-4 max-w-[32ch] text-sm text-paper/70 leading-relaxed">
+            <p className="mt-5 max-w-[32ch] text-sm text-paper/70 leading-relaxed">
               {footer.tagline}
             </p>
           </div>
 
           {footer.columns.map((col) => (
             <div key={col.title}>
-              <h5 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-coral">
+              <h5 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-coral">
                 {col.title}
               </h5>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l.href}>
                     <a href={l.href} className="text-sm text-paper/75 hover:text-coral transition-colors">
@@ -32,10 +32,10 @@ export function Footer() {
           ))}
 
           <div>
-            <h5 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-coral">
+            <h5 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-coral">
               {footer.contact.title}
             </h5>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {footer.contact.items.map((item) => (
                 <li key={item.label}>
                   {item.href ? (
@@ -51,10 +51,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h5 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-coral">
+            <h5 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-coral">
               {footer.redes.title}
             </h5>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {footer.redes.items.map((item) => (
                 <li key={item.label}>
                   <a

@@ -1,50 +1,78 @@
 import { Container } from "@/components/ui/Container";
-import { CrescentShape } from "@/components/ui/CrescentShape";
+import { Button } from "@/components/ui/Button";
+import { PhotoCrescent } from "@/components/ui/PhotoCrescent";
 import { hero } from "@/lib/content";
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden bg-navy-deep text-paper pt-28 pb-24 sm:pt-36 sm:pb-32 lg:min-h-[92vh] lg:flex lg:items-center"
+      className="relative isolate overflow-hidden bg-navy-deep text-paper pt-28 pb-20 sm:pt-32 lg:pt-36 lg:pb-28"
     >
-      <CrescentShape
-        variant="fluke"
-        tone="navy"
-        opacity={0.55}
-        className="-left-[20%] -top-[10%] h-[120%] w-[80%]"
+      {/* Soft ambient coral/sky swells, far behind */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-[18%] -top-[18%] h-[120%] w-[70%] rounded-full opacity-25"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, var(--color-sky), transparent 60%)",
+        }}
       />
-      <CrescentShape
-        variant="crescent"
-        tone="coral"
-        opacity={0.09}
-        mirror
-        className="-right-[20%] top-[15%] h-[90%] w-[70%]"
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-[6%] bottom-[-25%] h-[70%] w-[55%] rounded-full opacity-30"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, var(--color-coral), transparent 65%)",
+        }}
       />
 
       <Container className="relative z-10">
-        <p className="mb-10 inline-flex flex-wrap items-center gap-3 text-xs sm:text-[13px] font-medium uppercase tracking-[0.2em] text-coral">
-          <span className="h-px w-8 bg-coral" />
-          {hero.eyebrow}
-        </p>
+        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-10">
+          {/* Left: text */}
+          <div>
+            <p className="mb-7 inline-flex items-center gap-3 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-coral">
+              <span className="h-px w-7 bg-coral" />
+              {hero.eyebrow}
+            </p>
 
-        <h1 className="h-display max-w-[22ch] text-paper">
-          {hero.titleLines.map((line, i) => (
-            <span key={i} className="block">
-              {line.text}
-              <em className="not-italic text-coral">{line.em}</em>
-            </span>
-          ))}
-        </h1>
+            <h1 className="font-display font-extrabold leading-[0.96] tracking-tight text-paper text-[clamp(2.6rem,7.5vw,5.4rem)] max-w-[18ch]">
+              {hero.titleLines.map((l, i) => (
+                <span key={i} className="block">
+                  {l.text}
+                  <em className="not-italic text-coral">{l.em}</em>
+                </span>
+              ))}
+            </h1>
 
-        <div className="mt-12 grid max-w-4xl gap-8 sm:gap-12 border-t border-paper/15 pt-8 sm:grid-cols-2">
-          <p className="text-base sm:text-lg leading-relaxed text-paper">
-            {hero.body[0]}
-          </p>
-          <p className="text-base sm:text-lg leading-relaxed text-sky">
-            {hero.body[1]}
-          </p>
+            <p className="mt-7 max-w-[52ch] text-base sm:text-lg leading-relaxed text-sky">
+              {hero.body}
+            </p>
+
+            <div className="mt-9">
+              <Button href={hero.cta.href} variant="primary" size="lg">
+                {hero.cta.label}
+              </Button>
+            </div>
+          </div>
+
+          {/* Right: photo crescent */}
+          <div className="relative mx-auto w-full max-w-[520px] lg:max-w-none">
+            <PhotoCrescent variant={hero.photo.variant} />
+          </div>
         </div>
+
+        {/* Bottom pill strip */}
+        <ul className="mt-16 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-paper/15 pt-6 text-xs font-semibold uppercase tracking-[0.18em] text-sky lg:mt-24">
+          {hero.pills.map((p, i) => (
+            <li key={p} className="flex items-center gap-6">
+              <span>{p}</span>
+              {i < hero.pills.length - 1 && (
+                <span aria-hidden className="hidden h-px w-6 bg-paper/25 sm:inline-block" />
+              )}
+            </li>
+          ))}
+        </ul>
       </Container>
     </section>
   );
