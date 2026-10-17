@@ -18,13 +18,13 @@ export default function Page() {
         {/* Bloque central */}
         <div className="flex flex-1 flex-col justify-center">
           <div className="max-w-3xl">
-            {/* Logo oficial — ruta relativa para que resuelva bajo basePath (/seabornmedia/) */}
+            {/* Logo oficial (variante dark: "media" en coral para contrastar sobre navy) */}
             <img
-              src="./logo.svg"
+              src="./logo-dark.svg"
               alt="SeaBorn Media"
-              width={520}
-              height={140}
-              className="h-auto w-[min(80vw,520px)]"
+              width={340}
+              height={92}
+              className="h-auto w-[min(70vw,340px)]"
             />
 
             <h1 className="mt-10 max-w-[20ch] font-display text-[clamp(2.1rem,6vw,3.75rem)] font-extrabold leading-[1.05] tracking-tight text-paper">
