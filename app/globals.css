@@ -1,36 +1,25 @@
 @import "tailwindcss";
 
 /* ===================================================================
-   Brand tokens — Tailwind v4 theme.
-   Anything declared inside @theme becomes a Tailwind utility:
-   --color-navy-deep -> bg-navy-deep, text-navy-deep, etc.
+   SeaBorn Media — paleta oficial (identidad corporativa)
 =================================================================== */
 @theme {
-  --color-navy-deep: #2D4A6B;
-  --color-navy-darker: #233B57;
+  --color-navy: #29486B;
+  --color-navy-dark: #233b57;
+  --color-sky: #88B2FC;
   --color-coral: #F2A087;
-  --color-sky: #9DB8E8;
+  --color-cream: #FBDAD1;
   --color-teal: #3BA195;
-  --color-cream: #FCE8DF;
-  --color-ink: #1A2B40;
   --color-paper: #FFFFFF;
 
-  --font-display: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
-  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-
-  --radius-card: 1.5rem;
+  --font-display: var(--font-parkinsans), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* ===================================================================
-   Base
-=================================================================== */
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -39,41 +28,20 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
-  background: var(--color-paper);
-  color: var(--color-ink);
+  font-family: var(--font-display);
+  background: var(--color-navy);
+  color: var(--color-paper);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
   background: var(--color-coral);
-  color: var(--color-ink);
+  color: var(--color-navy);
 }
 
-/* Section anchors offset for sticky nav */
-section[id] {
-  scroll-margin-top: 5rem;
-}
-
-/* Focus ring — coral, visible, accessible */
 :focus-visible {
   outline: 2px solid var(--color-coral);
   outline-offset: 3px;
   border-radius: 4px;
-}
-
-/* Display headings get the geometric sans */
-.font-display {
-  font-family: var(--font-display);
-  letter-spacing: -0.02em;
-}
-
-/* Hero title scaling */
-.h-display {
-  font-family: var(--font-display);
-  font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.035em;
-  font-size: clamp(2.75rem, 8vw, 6rem);
 }

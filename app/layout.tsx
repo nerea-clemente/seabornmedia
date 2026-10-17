@@ -1,68 +1,47 @@
 import type { Metadata, Viewport } from "next";
-import { Nunito, Inter } from "next/font/google";
-import { site } from "@/lib/content";
+import { Parkinsans } from "next/font/google";
 import "./globals.css";
 
-const nunito = Nunito({
+const parkinsans = Parkinsans({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "800", "900"],
-  variable: "--font-nunito",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-parkinsans",
   display: "swap",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
+const title = "SeaBorn Media — Tu agencia de marketing y comunicación seafood";
+const description =
+  "Agencia de marketing y comunicación especializada en seafood, pesca y acuicultura. Próximamente.";
+const url = "https://www.seabornmedia.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: {
-    default: `${site.name} — ${site.description}`,
-    template: `%s · ${site.name}`,
-  },
-  description: site.description,
-  applicationName: site.name,
-  authors: [{ name: site.name }],
-  creator: site.name,
-  publisher: site.name,
-  keywords: [
-    "marketing seafood",
-    "agencia acuicultura",
-    "marketing pesca",
-    "comunicación seafood",
-    "branding sector pesquero",
-    "Galicia",
-  ],
+  metadataBase: new URL(url),
+  title,
+  description,
+  applicationName: "SeaBorn Media",
+  creator: "SeaBorn Media",
+  publisher: "SeaBorn Media",
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: site.url,
-    title: `${site.name} — ${site.description}`,
-    description: site.description,
-    siteName: site.name,
-    images: [{ url: site.ogImage, width: 1200, height: 630, alt: site.name }],
+    url,
+    title,
+    description,
+    siteName: "SeaBorn Media",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: `${site.name} — ${site.description}`,
-    description: site.description,
-    images: [site.ogImage],
-  },
+  twitter: { card: "summary_large_image", title, description },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#2D4A6B",
+  themeColor: "#29486B",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es-ES" className={`${nunito.variable} ${inter.variable}`}>
+    <html lang="es-ES" className={parkinsans.variable}>
       <body>{children}</body>
     </html>
   );
