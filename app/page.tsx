@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Page() {
   return (
     <main className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-navy text-paper">
@@ -7,7 +5,7 @@ export default function Page() {
       <svg
         aria-hidden
         viewBox="0 0 1536 1536"
-        className="pointer-events-none absolute -right-[22%] top-1/2 h-[160%] w-[90%] -translate-y-1/2 text-navy-dark opacity-100 sm:-right-[10%] sm:w-[70%]"
+        className="pointer-events-none absolute -right-[22%] top-1/2 h-[160%] w-[90%] -translate-y-1/2 text-navy-dark sm:-right-[10%] sm:w-[70%]"
       >
         <path
           fill="currentColor"
@@ -20,12 +18,12 @@ export default function Page() {
         {/* Bloque central */}
         <div className="flex flex-1 flex-col justify-center">
           <div className="max-w-3xl">
-            <Image
-              src="/logo.svg"
+            {/* Logo oficial — ruta relativa para que resuelva bajo basePath (/seabornmedia/) */}
+            <img
+              src="./logo.svg"
               alt="SeaBorn Media"
               width={520}
               height={140}
-              priority
               className="h-auto w-[min(80vw,520px)]"
             />
 
@@ -60,9 +58,8 @@ export default function Page() {
           </div>
         </div>
 
-        <footer className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-sky/15 pt-6 text-[11px] uppercase tracking-[0.18em] text-sky/70">
-          <span>SeaBorn Media · {new Date().getFullYear()}</span>
-          <span>Galicia · Oslo</span>
+        <footer className="mt-12 border-t border-sky/15 pt-6 text-[11px] uppercase tracking-[0.18em] text-sky/70">
+          SeaBorn Media · {new Date().getFullYear()}
         </footer>
       </div>
     </main>
