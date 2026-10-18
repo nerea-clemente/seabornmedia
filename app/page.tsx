@@ -46,14 +46,6 @@ export default function Page() {
                   →
                 </span>
               </a>
-              <a
-                href="https://instagram.com/seaborn.media"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm font-medium text-sky underline-offset-[6px] transition-colors hover:text-coral hover:underline"
-              >
-                Instagram @seaborn.media
-              </a>
             </div>
           </div>
         </div>
