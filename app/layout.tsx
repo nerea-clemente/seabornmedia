@@ -9,7 +9,7 @@ const parkinsans = Parkinsans({
   display: "swap",
 });
 
-const title = "SeaBorn Media — Tu agencia de marketing y comunicación seafood";
+const title = "SeaBorn Media · Tu agencia de marketing y comunicación seafood";
 const description =
   "Agencia de marketing y comunicación especializada en seafood, pesca y acuicultura. Próximamente.";
 const url = "https://www.seabornmedia.com";

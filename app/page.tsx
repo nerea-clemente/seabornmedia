@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <main className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-navy text-paper">
-      {/* Aleta oficial como marca de agua — shade sobre shade, como la portada del brand book */}
+      {/* Aleta oficial como marca de agua. Shade sobre shade, como la portada del brand book */}
       <svg
         aria-hidden
         viewBox="0 0 1536 1536"
@@ -18,13 +18,13 @@ export default function Page() {
         {/* Bloque central */}
         <div className="flex flex-1 flex-col justify-center">
           <div className="max-w-3xl">
-            {/* Logo oficial (variante dark: "media" en coral para contrastar sobre navy) */}
+            {/* Logo oficial, variante dark con "media" en coral para contrastar sobre navy */}
             <img
               src="./logo-dark.svg"
               alt="SeaBorn Media"
-              width={340}
-              height={92}
-              className="h-auto w-[min(70vw,340px)]"
+              width={280}
+              height={76}
+              className="h-auto w-[min(65vw,280px)]"
             />
 
             <h1 className="mt-10 max-w-[20ch] font-display text-[clamp(2.1rem,6vw,3.75rem)] font-extrabold leading-[1.05] tracking-tight text-paper">
